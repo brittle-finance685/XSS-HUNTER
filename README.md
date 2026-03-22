@@ -213,7 +213,7 @@ rm -rf results/ parameters.txt singleparam.txt withoutfuzz.txt subdomains.txt ac
 
 This tool is intended **strictly for authorized security testing only:**
 
-- ✅ Bug bounty programs (HackerOne, Bugcrowd)
+- ✅ Authorized bug bounty programs
 - ✅ CTF competitions
 - ✅ Explicitly authorized penetration testing engagements
 - ✅ Your own systems/applications
