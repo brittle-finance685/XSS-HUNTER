@@ -18,8 +18,13 @@ echo -e "${RESET}"
 
 # Python dependencies
 echo -e "${CYAN}[*]${RESET} Installing Python dependencies..."
-pip install -r requirements.txt
-echo -e "${GREEN}[+]${RESET} Python dependencies installed!"
+pip install requests
+echo -e "${GREEN}[+]${RESET} requests installed!"
+
+# ParamSpider
+echo -e "${CYAN}[*]${RESET} Installing ParamSpider..."
+pip install paramspider
+echo -e "${GREEN}[+]${RESET} ParamSpider installed!"
 
 # Subfinder
 echo -e "${CYAN}[*]${RESET} Installing Subfinder..."
